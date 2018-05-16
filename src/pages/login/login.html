@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="seu-lider" text-center>
+    <strong>Crie uma conta</strong>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item text-center>
+    <img src="assets/imgs/logo.png"/>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating> <ion-icon name="ios-contact-outline"></ion-icon> Nome</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating> <ion-icon name="ios-mail-open-outline"></ion-icon> Email</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating> <ion-icon name="ios-lock-outline"></ion-icon> Senha</ion-label>
+    <ion-input clearInput type="password"></ion-input>
+  </ion-item>
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col center text-center>
+      <button (click)="continue()" ion-button color="utilizando" round>
+        <strong>Continue</strong>
+      </button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col center text-center>
+      <button ion-button color="facebook" round icon-start>
+        <ion-icon name='logo-facebook' is-active="false"></ion-icon>
+        <strong>Facebook</strong>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-footer>
