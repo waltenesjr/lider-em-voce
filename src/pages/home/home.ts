@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {UtilizandoPage} from '../utilizando/utilizando';
 import {AtualizarPage} from '../atualizar/atualizar';
+import {SejaPage} from '../seja/seja';
 
 @Component({
   selector: 'page-home',
@@ -18,5 +19,9 @@ export class HomePage {
 
   goAtualizar() {
     this.navCtrl.push(AtualizarPage);
+  }
+
+  goSeja() {
+    this.navCtrl.push(SejaPage);
   }
 }

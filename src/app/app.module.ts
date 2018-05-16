@@ -12,6 +12,7 @@ import {IonicStorageModule} from '@ionic/storage';
 import {LoginPage} from '../pages/login/login';
 import {UtilizandoPage} from '../pages/utilizando/utilizando';
 import {AtualizarPage} from '../pages/atualizar/atualizar';
+import {SejaPage} from '../pages/seja/seja';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {AtualizarPage} from '../pages/atualizar/atualizar';
     ListPage,
     LoginPage,
     UtilizandoPage,
-    AtualizarPage
+    AtualizarPage,
+    SejaPage
 
   ],
   imports: [
@@ -35,7 +37,8 @@ import {AtualizarPage} from '../pages/atualizar/atualizar';
     ListPage,
     LoginPage,
     UtilizandoPage,
-    AtualizarPage
+    AtualizarPage,
+    SejaPage
   ],
   providers: [
     StatusBar,
