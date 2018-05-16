@@ -11,6 +11,7 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {IonicStorageModule} from '@ionic/storage';
 import {LoginPage} from '../pages/login/login';
 import {UtilizandoPage} from '../pages/utilizando/utilizando';
+import {AtualizarPage} from '../pages/atualizar/atualizar';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import {UtilizandoPage} from '../pages/utilizando/utilizando';
     HomePage,
     ListPage,
     LoginPage,
-    UtilizandoPage
+    UtilizandoPage,
+    AtualizarPage
+
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import {UtilizandoPage} from '../pages/utilizando/utilizando';
     HomePage,
     ListPage,
     LoginPage,
-    UtilizandoPage
+    UtilizandoPage,
+    AtualizarPage
   ],
   providers: [
     StatusBar,
