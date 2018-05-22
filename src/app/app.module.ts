@@ -13,6 +13,7 @@ import {LoginPage} from '../pages/login/login';
 import {UtilizandoPage} from '../pages/utilizando/utilizando';
 import {AtualizarPage} from '../pages/atualizar/atualizar';
 import {SejaPage} from '../pages/seja/seja';
+import {PratiquePage} from '../pages/pratique/pratique';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {SejaPage} from '../pages/seja/seja';
     LoginPage,
     UtilizandoPage,
     AtualizarPage,
-    SejaPage
+    SejaPage,
+    PratiquePage
 
   ],
   imports: [
@@ -38,7 +40,8 @@ import {SejaPage} from '../pages/seja/seja';
     LoginPage,
     UtilizandoPage,
     AtualizarPage,
-    SejaPage
+    SejaPage,
+    PratiquePage
   ],
   providers: [
     StatusBar,
