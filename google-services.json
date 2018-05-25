@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "458382218721",
+    "firebase_url": "https://lider-em-voce-4de9f.firebaseio.com",
+    "project_id": "lider-em-voce-4de9f",
+    "storage_bucket": "lider-em-voce-4de9f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458382218721:android:db09bcaeed65d1d2",
+        "android_client_info": {
+          "package_name": "com.lideremmimonline.Lideremmim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458382218721-d9jg2v341pr2lmu52n3nivb4m1lsjuap.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "458382218721-d9jg2v341pr2lmu52n3nivb4m1lsjuap.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaY84p5DvFEy9FByjA5XhNE-UM8Nk2wHg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

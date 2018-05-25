@@ -14,6 +14,7 @@ import {UtilizandoPage} from '../pages/utilizando/utilizando';
 import {AtualizarPage} from '../pages/atualizar/atualizar';
 import {SejaPage} from '../pages/seja/seja';
 import {PratiquePage} from '../pages/pratique/pratique';
+import {Push} from '@ionic-native/push';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import {PratiquePage} from '../pages/pratique/pratique';
   providers: [
     StatusBar,
     SplashScreen,
+    Push,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
