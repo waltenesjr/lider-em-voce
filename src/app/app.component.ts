@@ -17,7 +17,7 @@ export class MyApp {
 
   constructor(private storage: Storage, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
-    storage.get('login').then((val) => {
+    storage.get('cadastrado').then((val) => {
       if (val) {
         this.rootPage = HomePage;
       } else {

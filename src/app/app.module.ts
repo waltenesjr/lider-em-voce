@@ -14,7 +14,19 @@ import {UtilizandoPage} from '../pages/utilizando/utilizando';
 import {AtualizarPage} from '../pages/atualizar/atualizar';
 import {SejaPage} from '../pages/seja/seja';
 import {PratiquePage} from '../pages/pratique/pratique';
-import {Push} from "@ionic-native/push";
+import {Push} from '@ionic-native/push';
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireAuthModule} from 'angularfire2/auth';
+import {AuthService} from '../providers/auth/auth-service';
+
+const fireBaseConfig = {
+  apiKey: 'AIzaSyC4ETJq4Ox5iToDwOROeIQf11WjVVzrfeQ',
+  authDomain: 'lider-em-voce-4de9f.firebaseapp.com',
+  databaseURL: 'https://lider-em-voce-4de9f.firebaseio.com',
+  projectId: 'lider-em-voce-4de9f',
+  storageBucket: 'lider-em-voce-4de9f.appspot.com',
+  messagingSenderId: '458382218721'
+};
 
 @NgModule({
   declarations: [
@@ -31,7 +43,9 @@ import {Push} from "@ionic-native/push";
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    AngularFireModule.initializeApp(fireBaseConfig),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -48,6 +62,7 @@ import {Push} from "@ionic-native/push";
     StatusBar,
     SplashScreen,
     Push,
+    AuthService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
