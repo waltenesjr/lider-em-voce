@@ -43,8 +43,10 @@ export class LoginPage {
   }
 
   cadastrar(): void {
+    let toast = this.toastCtrl.create({duration: 3000, position: 'bottom'});
+    toast.setMessage('Tentando cadastrar usuário');
+    toast.present();
     if (this.form.valid) {
-      let toast = this.toastCtrl.create({duration: 3000, position: 'bottom'});
       let user = new User();
       user.email = this.form.controls['email'].value;
       user.password = this.form.controls['password'].value;
