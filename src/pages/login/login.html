@@ -1,22 +1,22 @@
 <ion-header>
   <ion-toolbar color="seu-lider" text-center>
-    <strong>Crie uma conta</strong>
+    <strong>Conta</strong>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <form [formGroup]="form" novalidate autocomplete="off">
-    <ion-list *ngIf="etapa == 'loginEmail'">
+    <ion-list>
       <ion-item text-center>
         <img src="assets/imgs/logo.png"/>
       </ion-item>
 
-      <ion-item>
+      <ion-item *ngIf="etapa == 'loginEmail'">
         <ion-label stacked> <ion-icon name="ios-mail-open-outline"></ion-icon> Email</ion-label>
         <ion-input type="text" formControlName="email" required></ion-input>
       </ion-item>
 
-      <ion-item>
+      <ion-item *ngIf="etapa == 'loginEmail'">
         <ion-label stacked> <ion-icon name="ios-lock-outline"></ion-icon> Senha</ion-label>
         <ion-input type="password" formControlName="password" required></ion-input>
       </ion-item>
@@ -33,6 +33,13 @@
       <ion-col center text-center>
         <button type="submit" (click)="createEmail()" ion-button color="utilizando" round>
           <strong>Entrar</strong>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="etapa == 'loginEmail'">
+      <ion-col center text-center>
+        <button (click)="etapa = 'tipoLogin'" ion-button color="seu-lider" round>
+          <strong>Voltar</strong>
         </button>
       </ion-col>
     </ion-row>
