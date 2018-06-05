@@ -6,7 +6,7 @@
 
 <ion-content padding>
   <form [formGroup]="form" novalidate autocomplete="off">
-    <ion-list>
+    <ion-list *ngIf="etapa == 'loginEmail'">
       <ion-item text-center>
         <img src="assets/imgs/logo.png"/>
       </ion-item>
@@ -22,14 +22,21 @@
       </ion-item>
     </ion-list>
 
-    <ion-row>
+    <ion-row *ngIf="etapa == 'tipoLogin'">
       <ion-col center text-center>
-        <button type="submit" (click)="createEmail()" ion-button color="utilizando" round>
+        <button type="submit" (click)="etapa = 'loginEmail'" ion-button color="utilizando" round>
           <strong>Cadastrar</strong>
         </button>
       </ion-col>
     </ion-row>
-    <ion-row>
+    <ion-row *ngIf="etapa == 'loginEmail'">
+      <ion-col center text-center>
+        <button type="submit" (click)="createEmail()" ion-button color="utilizando" round>
+          <strong>Entrar</strong>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="etapa == 'tipoLogin'">
       <ion-col center text-center>
         <button ion-button (click)="createFacebook()" color="facebook" round icon-start>
           <ion-icon name='logo-facebook' is-active="false"></ion-icon>
@@ -37,7 +44,7 @@
         </button>
       </ion-col>
     </ion-row>
-    <ion-row>
+    <ion-row *ngIf="etapa == 'tipoLogin'">
       <ion-col center text-center>
         <button (click)="continue()" ion-button color="seu-lider" round>
           <strong>Continue sem cadastrar</strong>
