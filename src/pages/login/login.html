@@ -24,14 +24,14 @@
 
     <ion-row>
       <ion-col center text-center>
-        <button type="submit" (click)="cadastrar()" ion-button color="utilizando" round>
+        <button type="submit" (click)="createEmail()" ion-button color="utilizando" round>
           <strong>Cadastrar</strong>
         </button>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col center text-center>
-        <button ion-button color="facebook" round icon-start>
+        <button ion-button (click)="createFacebook()" color="facebook" round icon-start>
           <ion-icon name='logo-facebook' is-active="false"></ion-icon>
           <strong>Facebook</strong>
         </button>

@@ -42,22 +42,35 @@ export class LoginPage {
     });
   }
 
-  cadastrar(): void {
+  createEmail(): void {
     let toast = this.toastCtrl.create({duration: 3000, position: 'bottom'});
     toast.setMessage('Tentando cadastrar usuário');
     toast.present();
     if (this.form.valid) {
-      let user = new User();
-      user.email = this.form.controls['email'].value;
-      user.password = this.form.controls['password'].value;
+      let user = new User(this.form.controls['email'].value, this.form.controls['password'].value);
       this.authService.createUser(user).then((user: any) => {
         toast.setMessage('Usuário cadastrado com sucesso');
         toast.present();
         this.continue();
       }).catch((error: any) => {
         toast.setMessage('Erro ao cadastrar usuário - ' + error.message);
+        toast.present();
       });
     }
+  }
+
+  createFacebook() {
+    let toast = this.toastCtrl.create({duration: 3000, position: 'bottom'});
+    toast.setMessage('Tentando cadastrar usuário');
+    toast.present();
+    this.authService.createUserFacebook().then((user: any) => {
+      toast.setMessage('Usuário cadastrado com sucesso');
+      toast.present();
+      this.continue();
+    }).catch((error: any) => {
+      toast.setMessage('Erro ao cadastrar usuário - ' + error.message);
+      toast.present();
+    });
   }
 
   continue(): void {
