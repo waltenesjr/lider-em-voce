@@ -12,12 +12,12 @@
 
 <ion-content padding class="background">
   <ion-list>
-    <ion-item (click)="openPensamento()">
+    <ion-item>
       <ion-avatar item-start>
-        <img src="assets/imgs/utilizando/pensamento-lider.png">
+        <img (click)="openPensamento()" src="assets/imgs/utilizando/pensamento-lider.png">
       </ion-avatar>
-      <h2>Pensamento lider</h2>
-      <p>Quando a situação for boa, desfrute-a.</p>
+      <h2 (click)="openPensamento()">Pensamento lider</h2>
+      <p (click)="openPensamento()">Quando a situação for boa, desfrute-a.</p>
     </ion-item>
 
     <ion-item>
