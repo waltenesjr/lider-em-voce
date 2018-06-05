@@ -90,4 +90,9 @@
         <variable name="SENDER_ID" value="458382218721" />
     </plugin>
     <engine name="android" spec="~7.1.0" />
+    <plugin name="cordova-plugin-facebook4" spec="^2.1.0">
+        <variable name="APP_ID" value="215645839220994" />
+        <variable name="APP_NAME" value="Líder em você" />
+        <variable name="ANDROID_SDK_VERSION" value="4.+" />
+    </plugin>
 </widget>

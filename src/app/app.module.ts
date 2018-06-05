@@ -18,6 +18,7 @@ import {Push} from '@ionic-native/push';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AuthService} from '../providers/auth/auth-service';
+import {Facebook} from "@ionic-native/facebook";
 
 const fireBaseConfig = {
   apiKey: 'AIzaSyC4ETJq4Ox5iToDwOROeIQf11WjVVzrfeQ',
@@ -63,6 +64,7 @@ const fireBaseConfig = {
     SplashScreen,
     Push,
     AuthService,
+    Facebook,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
