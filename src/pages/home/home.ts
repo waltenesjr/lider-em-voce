@@ -4,6 +4,7 @@ import {UtilizandoPage} from '../utilizando/utilizando';
 import {AtualizarPage} from '../atualizar/atualizar';
 import {SejaPage} from '../seja/seja';
 import {PratiquePage} from '../pratique/pratique';
+import {PerfilPage} from '../perfil/perfil';
 
 @Component({
   selector: 'page-home',
@@ -17,6 +18,10 @@ export class HomePage {
 
   goUtilizando() {
     this.navCtrl.push(UtilizandoPage);
+  }
+
+  goPerfil() {
+    this.navCtrl.push(PerfilPage);
   }
 
   goAtualizar() {

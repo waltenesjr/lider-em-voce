@@ -1,6 +1,6 @@
 .backgroud {
   /* Location of the image */
-  background-image: url('../../assets/imgs/back-menu.jpg');
+  background-image: url("../../assets/imgs/back-menu.jpg");
 
   /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
@@ -15,8 +15,4 @@
   /* This is what makes the background image rescale based
      on the container's size */
   background-size: cover;
-
-  /* Set a background color that will be displayed
-     while the background image is loading */
-  background-color: #464646;
 }
