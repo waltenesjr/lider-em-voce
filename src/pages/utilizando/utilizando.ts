@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
+import {PensamentoPage} from './pensamento/pensamento';
 
 /**
  * Generated class for the UtilizandoPage page.
@@ -17,4 +18,7 @@ export class UtilizandoPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  openPensamento() {
+    this.navCtrl.setRoot(PensamentoPage);
+  }
 }
