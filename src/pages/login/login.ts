@@ -23,6 +23,8 @@ export class LoginPage {
   public form: FormGroup;
   public fb: FormBuilder;
 
+  etapa: string;
+
   constructor(private injector: Injector,
               private authService: AuthService,
               private storage: Storage,
@@ -32,6 +34,7 @@ export class LoginPage {
               public navParams: NavParams) {
     this.configPush();
     this.initForm();
+    this.etapa = 'tipoLogin';
   }
 
   initForm(): void {
