@@ -12,7 +12,7 @@ import {IonicStorageModule} from '@ionic/storage';
 import {LoginPage} from '../pages/login/login';
 import {UtilizandoPage} from '../pages/utilizando/utilizando';
 import {AtualizarPage} from '../pages/atualizar/atualizar';
-import {SejaPage} from '../pages/seja/seja';
+import {SejaPage} from '../pages/utilizando/seja/seja';
 import {PratiquePage} from '../pages/pratique/pratique';
 import {Push} from '@ionic-native/push';
 import {AngularFireModule} from 'angularfire2';
@@ -21,6 +21,12 @@ import {AuthService} from '../providers/auth/auth-service';
 import {Facebook} from "@ionic-native/facebook";
 import {PerfilPage} from '../pages/perfil/perfil';
 import {PensamentoPage} from "../pages/utilizando/pensamento/pensamento";
+import {EscolhaPage} from '../pages/utilizando/escolha/escolha';
+import {IdealizadoraPage} from '../pages/utilizando/idealizadora/idealizadora';
+import {LiderPage} from '../pages/utilizando/lider/lider';
+import {PazesPage} from '../pages/utilizando/pazes/pazes';
+import {SiPage} from '../pages/utilizando/si/si';
+import {RealidadePage} from '../pages/utilizando/realidade/realidade';
 
 const fireBaseConfig = {
   apiKey: 'AIzaSyC4ETJq4Ox5iToDwOROeIQf11WjVVzrfeQ',
@@ -37,13 +43,21 @@ const fireBaseConfig = {
     HomePage,
     ListPage,
     LoginPage,
-    UtilizandoPage,
     AtualizarPage,
     SejaPage,
     PratiquePage,
+    PerfilPage,
+    // Utilizando o aplicativo
+    UtilizandoPage,
+    EscolhaPage,
+    IdealizadoraPage,
+    LiderPage,
+    PazesPage,
     PensamentoPage,
-    PerfilPage
-
+    RealidadePage,
+    SejaPage,
+    SiPage,
+    AtualizarPage
   ],
   imports: [
     BrowserModule,
@@ -59,11 +73,21 @@ const fireBaseConfig = {
     ListPage,
     LoginPage,
     UtilizandoPage,
-    AtualizarPage,
     SejaPage,
     PratiquePage,
     PensamentoPage,
-    PerfilPage
+    PerfilPage,
+    // Utilizando o aplicativo
+    UtilizandoPage,
+    EscolhaPage,
+    IdealizadoraPage,
+    LiderPage,
+    PazesPage,
+    PensamentoPage,
+    RealidadePage,
+    SejaPage,
+    SiPage,
+    AtualizarPage
   ],
   providers: [
     StatusBar,

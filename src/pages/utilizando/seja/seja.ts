@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
+import { Component } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the SejaPage page.
@@ -10,7 +10,7 @@ import {NavController, NavParams} from 'ionic-angular';
 
 @Component({
   selector: 'page-seja',
-  templateUrl: 'seja.html'
+  templateUrl: 'seja.html',
 })
 export class SejaPage {
 

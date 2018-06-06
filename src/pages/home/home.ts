@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {UtilizandoPage} from '../utilizando/utilizando';
 import {AtualizarPage} from '../atualizar/atualizar';
-import {SejaPage} from '../seja/seja';
+import {SejaPage} from '../utilizando/seja/seja';
 import {PratiquePage} from '../pratique/pratique';
 import {PerfilPage} from '../perfil/perfil';
 
