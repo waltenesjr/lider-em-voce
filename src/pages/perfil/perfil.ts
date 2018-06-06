@@ -27,8 +27,10 @@ export class PerfilPage {
   }
 
   changeList(pergunta: string) {
-    this.etapa++;
     this.contarPergunta(pergunta);
+    setTimeout(() => {
+      this.etapa++;
+    }, 1000);
   }
 
   getResult(pergunta: string) {
