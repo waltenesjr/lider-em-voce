@@ -19,6 +19,6 @@ export class UtilizandoPage {
   }
 
   openPensamento() {
-    this.navCtrl.setRoot(PensamentoPage);
+    this.navCtrl.push(PensamentoPage);
   }
 }

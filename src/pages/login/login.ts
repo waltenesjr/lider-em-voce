@@ -1,7 +1,6 @@
 import {Component, Injector} from '@angular/core';
 import {NavController, NavParams, ToastController} from 'ionic-angular';
 import {HomePage} from '../home/home';
-import {Push, PushObject, PushOptions} from '@ionic-native/push';
 import {Storage} from '@ionic/storage';
 import {User} from '../../providers/auth/user';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
@@ -28,11 +27,9 @@ export class LoginPage {
   constructor(private injector: Injector,
               private authService: AuthService,
               private storage: Storage,
-              private push: Push,
               private toastCtrl: ToastController,
               public navCtrl: NavController,
               public navParams: NavParams) {
-    this.configPush();
     this.initForm();
     this.etapa = 'tipoLogin';
   }
@@ -79,36 +76,5 @@ export class LoginPage {
   continue(): void {
     this.storage.set('cadastrado', true);
     this.navCtrl.setRoot(HomePage);
-  }
-
-  configPush(): void {
-    this.push.hasPermission().then((res: any) => {
-      if (res.isEnabled) {
-        const options: PushOptions = {
-          android: {
-            vibrate: true
-          },
-          ios: {
-            alert: 'true',
-            badge: true,
-            sound: 'false'
-          },
-          windows: {},
-          browser: {
-            pushServiceURL: 'http://push.api.phonegap.com/v1/push'
-          }
-        };
-
-        const pushObject: PushObject = this.push.init(options);
-
-        pushObject.on('notification').subscribe((notification: any) => {
-          alert(notification.message);
-        });
-
-        pushObject.on('registration').subscribe((registration: any) => console.log('Device registered', registration));
-
-        pushObject.on('error').subscribe(error => console.error('Error with Push plugin', error));
-      }
-    });
   }
 }

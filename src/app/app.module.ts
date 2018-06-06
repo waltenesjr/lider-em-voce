@@ -20,6 +20,7 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AuthService} from '../providers/auth/auth-service';
 import {Facebook} from "@ionic-native/facebook";
 import {PerfilPage} from '../pages/perfil/perfil';
+import {PensamentoPage} from "../pages/utilizando/pensamento/pensamento";
 
 const fireBaseConfig = {
   apiKey: 'AIzaSyC4ETJq4Ox5iToDwOROeIQf11WjVVzrfeQ',
@@ -40,6 +41,7 @@ const fireBaseConfig = {
     AtualizarPage,
     SejaPage,
     PratiquePage,
+    PensamentoPage,
     PerfilPage
 
   ],
@@ -60,6 +62,7 @@ const fireBaseConfig = {
     AtualizarPage,
     SejaPage,
     PratiquePage,
+    PensamentoPage,
     PerfilPage
   ],
   providers: [
