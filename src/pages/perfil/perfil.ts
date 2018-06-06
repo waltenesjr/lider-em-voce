@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {NavController, NavParams} from 'ionic-angular';
 
 /**
  * Generated class for the PerfilPage page.
@@ -10,9 +10,11 @@ import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-perfil',
-  templateUrl: 'perfil.html',
+  templateUrl: 'perfil.html'
 })
 export class PerfilPage {
+
+  etapa: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

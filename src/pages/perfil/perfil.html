@@ -11,7 +11,7 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list radio-group>
+  <ion-list radio-group *ngIf="etapa == 1" (ionChange)="etapa = 2">
     <h4>1 – Você tem referências para atingir seus objetivos?</h4>
 
     <ion-item>
@@ -30,7 +30,7 @@
     </ion-item>
   </ion-list>
 
-  <ion-list radio-group>
+  <ion-list radio-group *ngIf="etapa == 2" (ionChange)="etapa = 3">
     <h4>
       2- Você se compara (comportamento comparativo) com outras pessoas para saber se é melhor ou pior?
     </h4>
@@ -51,7 +51,7 @@
     </ion-item>
   </ion-list>
 
-  <ion-list radio-group>
+  <ion-list radio-group *ngIf="etapa == 3" (ionChange)="etapa = 4">
     <h4>
       3- Você estabelece metas coerentes para atingir seus objetivos?
     </h4>
@@ -72,7 +72,7 @@
     </ion-item>
   </ion-list>
 
-  <ion-list radio-group>
+  <ion-list radio-group *ngIf="etapa == 4">
     <h4>
       4- Você enfatiza a assertividade primeiro quando deseja alcançar algo?
     </h4>
@@ -93,7 +93,7 @@
     </ion-item>
   </ion-list>
 
-  <ion-list radio-group>
+  <ion-list radio-group *ngIf="etapa == 5">
     <h4>
       5- Quando uma expectativa é frustrada você responsabiliza...
     </h4>
@@ -114,7 +114,7 @@
     </ion-item>
   </ion-list>
 
-  <ion-list radio-group>
+  <ion-list radio-group *ngIf="etapa == 6">
     <h4>
       6- Em uma situação ao se deparar com dificuldades você...
     </h4>
@@ -135,7 +135,7 @@
     </ion-item>
   </ion-list>
 
-  <ion-list radio-group>
+  <ion-list radio-group *ngIf="etapa == 7">
     <h4>
       7- Em situações rotineiras você habitualmente é...
     </h4>
@@ -156,7 +156,7 @@
     </ion-item>
   </ion-list>
 
-  <ion-list radio-group>
+  <ion-list radio-group *ngIf="etapa == 8">
     <h4>
       8- Diante de um problema...
     </h4>
@@ -177,7 +177,7 @@
     </ion-item>
   </ion-list>
 
-  <ion-list radio-group>
+  <ion-list radio-group *ngIf="etapa == 9">
     <h4>
       9- Alguém importante para você está passando por um problema. Sem que a pessoa peça você se empenha ajudá-la?
     </h4>
@@ -198,7 +198,7 @@
     </ion-item>
   </ion-list>
 
-  <ion-list radio-group>
+  <ion-list radio-group *ngIf="etapa == 10">
     <h4>
       10- Você acredita que em qualquer situação, por mais difícil que seja, pode sempre fazer alguma coisa para melhorar?
     </h4>
@@ -219,7 +219,7 @@
     </ion-item>
   </ion-list>
 
-  <ion-list radio-group>
+  <ion-list radio-group *ngIf="etapa == 11">
     <h4>
       11- Você cumpre os compromissos que faz consigo mesmo?
     </h4>
@@ -240,7 +240,7 @@
     </ion-item>
   </ion-list>
 
-  <ion-list radio-group>
+  <ion-list radio-group *ngIf="etapa == 12">
     <h4>
       12- Você comemora/desfruta quando conquista algo importante?
     </h4>
@@ -261,7 +261,7 @@
     </ion-item>
   </ion-list>
 
-  <ion-list radio-group>
+  <ion-list radio-group *ngIf="etapa == 13">
     <h4>
       13- Você é bom com você como é com os outros?
     </h4>
