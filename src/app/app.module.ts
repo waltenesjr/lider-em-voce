@@ -27,6 +27,7 @@ import {LiderPage} from '../pages/utilizando/lider/lider';
 import {PazesPage} from '../pages/utilizando/pazes/pazes';
 import {SiPage} from '../pages/utilizando/si/si';
 import {RealidadePage} from '../pages/utilizando/realidade/realidade';
+import {UtilizarPage} from '../pages/utilizando/utilizar/utilizar';
 
 const fireBaseConfig = {
   apiKey: 'AIzaSyC4ETJq4Ox5iToDwOROeIQf11WjVVzrfeQ',
@@ -57,7 +58,7 @@ const fireBaseConfig = {
     RealidadePage,
     SejaPage,
     SiPage,
-    AtualizarPage
+    UtilizarPage
   ],
   imports: [
     BrowserModule,
@@ -72,11 +73,11 @@ const fireBaseConfig = {
     HomePage,
     ListPage,
     LoginPage,
-    UtilizandoPage,
     SejaPage,
     PratiquePage,
     PensamentoPage,
     PerfilPage,
+    AtualizarPage,
     // Utilizando o aplicativo
     UtilizandoPage,
     EscolhaPage,
@@ -87,7 +88,7 @@ const fireBaseConfig = {
     RealidadePage,
     SejaPage,
     SiPage,
-    AtualizarPage
+    UtilizarPage
   ],
   providers: [
     StatusBar,
