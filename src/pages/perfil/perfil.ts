@@ -20,6 +20,10 @@ export class PerfilPage {
     this.etapa = 1;
   }
 
+  changeList(evento) {
+    alert(evento);
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad PerfilPage');
   }

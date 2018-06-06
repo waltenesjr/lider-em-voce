@@ -11,7 +11,7 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list radio-group *ngIf="etapa == 1" (ionChange)="etapa = 2">
+  <ion-list radio-group *ngIf="etapa == 1" (ionChange)="changeList($event)">
     <h4>1 – Você tem referências para atingir seus objetivos?</h4>
 
     <ion-item>
