@@ -17,6 +17,7 @@ export class PerfilPage {
   etapa: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.etapa = 1;
   }
 
   ionViewDidLoad() {
