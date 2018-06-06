@@ -8,6 +8,7 @@ import {SejaPage} from './seja/seja';
 import {SiPage} from './si/si';
 import {UtilizarPage} from './utilizar/utilizar';
 import {RealidadePage} from './realidade/realidade';
+import {IdealizadoraPage} from './idealizadora/idealizadora';
 
 /**
  * Generated class for the UtilizandoPage page.
@@ -30,7 +31,7 @@ export class UtilizandoPage {
   }
 
   openIdealizadora() {
-    this.navCtrl.push(PensamentoPage);
+    this.navCtrl.push(IdealizadoraPage);
   }
 
   openLider() {
