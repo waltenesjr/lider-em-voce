@@ -4,7 +4,6 @@ import {IonicApp, IonicErrorHandler, IonicModule} from 'ionic-angular';
 
 import {MyApp} from './app.component';
 import {HomePage} from '../pages/home/home';
-import {ListPage} from '../pages/list/list';
 
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
@@ -18,9 +17,9 @@ import {Push} from '@ionic-native/push';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AuthService} from '../providers/auth/auth-service';
-import {Facebook} from "@ionic-native/facebook";
+import {Facebook} from '@ionic-native/facebook';
 import {PerfilPage} from '../pages/perfil/perfil';
-import {PensamentoPage} from "../pages/utilizando/pensamento/pensamento";
+import {PensamentoPage} from '../pages/utilizando/pensamento/pensamento';
 import {EscolhaPage} from '../pages/utilizando/escolha/escolha';
 import {IdealizadoraPage} from '../pages/utilizando/idealizadora/idealizadora';
 import {LiderPage} from '../pages/utilizando/lider/lider';
@@ -28,6 +27,24 @@ import {PazesPage} from '../pages/utilizando/pazes/pazes';
 import {SiPage} from '../pages/utilizando/si/si';
 import {RealidadePage} from '../pages/utilizando/realidade/realidade';
 import {UtilizarPage} from '../pages/utilizando/utilizar/utilizar';
+import {LideremvcPage} from '../pages/atualizar/lideremvc/lideremvc';
+import {AutoliderancaPage} from '../pages/atualizar/autolideranca/autolideranca';
+import {AutosabotagemPage} from '../pages/atualizar/autosabotagem/autosabotagem';
+import {IdealizacaoPage} from '../pages/atualizar/idealizacao/idealizacao';
+import {ComparacaoPage} from '../pages/atualizar/comparacao/comparacao';
+import {VitimizacaoPage} from '../pages/atualizar/vitimizacao/vitimizacao';
+import {LimitacaoPage} from '../pages/atualizar/limitacao/limitacao';
+import {ImpotenciaPage} from '../pages/atualizar/impotencia/impotencia';
+import {ImaginacaoPage} from '../pages/atualizar/imaginacao/imaginacao';
+import {AlternativaPage} from '../pages/pratique/alternativa/alternativa';
+import {AtitudePage} from '../pages/pratique/atitude/atitude';
+import {AutocriticaPage} from '../pages/pratique/autocritica/autocritica';
+import {DiarioPage} from '../pages/pratique/diario/diario';
+import {FocoPage} from '../pages/pratique/foco/foco';
+import {TempoPage} from '../pages/pratique/tempo/tempo';
+import {VideoPage} from '../pages/video/video';
+import {RecursoPage} from '../pages/recurso/recurso';
+import {ImportantePage} from '../pages/importante/importante';
 
 const fireBaseConfig = {
   apiKey: 'AIzaSyC4ETJq4Ox5iToDwOROeIQf11WjVVzrfeQ',
@@ -42,12 +59,12 @@ const fireBaseConfig = {
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     LoginPage,
-    AtualizarPage,
-    SejaPage,
-    PratiquePage,
     PerfilPage,
+    LiderPage,
+    VideoPage,
+    RecursoPage,
+    ImportantePage,
     // Utilizando o aplicativo
     UtilizandoPage,
     EscolhaPage,
@@ -58,7 +75,26 @@ const fireBaseConfig = {
     RealidadePage,
     SejaPage,
     SiPage,
-    UtilizarPage
+    UtilizarPage,
+    // Atualizar crença
+    AtualizarPage,
+    LideremvcPage,
+    AutoliderancaPage,
+    AutosabotagemPage,
+    IdealizacaoPage,
+    ComparacaoPage,
+    VitimizacaoPage,
+    LimitacaoPage,
+    ImpotenciaPage,
+    ImaginacaoPage,
+    // Pratique sua auto liderança
+    PratiquePage,
+    AlternativaPage,
+    AtitudePage,
+    AutocriticaPage,
+    DiarioPage,
+    FocoPage,
+    TempoPage
   ],
   imports: [
     BrowserModule,
@@ -71,13 +107,12 @@ const fireBaseConfig = {
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     LoginPage,
-    SejaPage,
-    PratiquePage,
-    PensamentoPage,
     PerfilPage,
-    AtualizarPage,
+    LiderPage,
+    VideoPage,
+    RecursoPage,
+    ImportantePage,
     // Utilizando o aplicativo
     UtilizandoPage,
     EscolhaPage,
@@ -88,7 +123,26 @@ const fireBaseConfig = {
     RealidadePage,
     SejaPage,
     SiPage,
-    UtilizarPage
+    UtilizarPage,
+    // Atualizar crença
+    AtualizarPage,
+    LideremvcPage,
+    AutoliderancaPage,
+    AutosabotagemPage,
+    IdealizacaoPage,
+    ComparacaoPage,
+    VitimizacaoPage,
+    LimitacaoPage,
+    ImpotenciaPage,
+    ImaginacaoPage,
+    // Pratique sua auto liderança
+    PratiquePage,
+    AlternativaPage,
+    AtitudePage,
+    AutocriticaPage,
+    DiarioPage,
+    FocoPage,
+    TempoPage
   ],
   providers: [
     StatusBar,
