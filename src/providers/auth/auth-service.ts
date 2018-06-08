@@ -19,10 +19,7 @@ export class AuthService {
 
   createUserFacebook() {
     return this.facebook.login(['public_profile', 'email']).then((res: FacebookLoginResponse) => {
-      this.facebook.api('me?fields=email', []).then(profile => {
-        alert(JSON.stringify(profile));
-        return this.createUser(new User(profile['email'], '123456789'));
-      })
+      alert(JSON.stringify(res));
     });
   }
 }

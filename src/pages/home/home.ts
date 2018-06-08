@@ -1,10 +1,11 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {NavController, ToastController} from 'ionic-angular';
 import {UtilizandoPage} from '../utilizando/utilizando';
 import {AtualizarPage} from '../atualizar/atualizar';
 import {SejaPage} from '../utilizando/seja/seja';
 import {PratiquePage} from '../pratique/pratique';
 import {PerfilPage} from '../perfil/perfil';
+import {Storage} from '@ionic/storage';
 
 @Component({
   selector: 'page-home',
@@ -12,8 +13,21 @@ import {PerfilPage} from '../perfil/perfil';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,
+              private storage: Storage,
+              private toastCtrl: ToastController) {
+    this.primeiroAcesso();
+  }
 
+  primeiroAcesso() {
+    this.storage.get('primeiroAcesso').then((val) => {
+      if (!val) {
+        let toast = this.toastCtrl.create({position: 'top', closeButtonText: 'OK'});
+        toast.setMessage('Bem vindo, descubra aqui o líder que há em você');
+        toast.present();
+        this.storage.set('primeiroAcesso', true);
+      }
+    });
   }
 
   goUtilizando() {

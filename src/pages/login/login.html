@@ -5,26 +5,24 @@
 </ion-header>
 
 <ion-content padding>
-  <form [formGroup]="form" novalidate autocomplete="off">
-    <ion-list>
-      <ion-item text-center>
-        <img src="assets/imgs/logo.png"/>
-      </ion-item>
+  <form [formGroup]="form">
+    <ion-item text-center>
+      <img src="assets/imgs/logo.png"/>
+    </ion-item>
 
-      <ion-item *ngIf="etapa == 'loginEmail'">
-        <ion-label stacked> <ion-icon name="ios-mail-open-outline"></ion-icon> Email</ion-label>
-        <ion-input type="text" formControlName="email" required></ion-input>
-      </ion-item>
+    <ion-item *ngIf="etapa == 'loginEmail'">
+      <ion-label stacked> <ion-icon name="ios-mail-open-outline"></ion-icon> Email</ion-label>
+      <ion-input type="text" formControlName="email" required></ion-input>
+    </ion-item>
 
-      <ion-item *ngIf="etapa == 'loginEmail'">
-        <ion-label stacked> <ion-icon name="ios-lock-outline"></ion-icon> Senha</ion-label>
-        <ion-input type="password" formControlName="password" required></ion-input>
-      </ion-item>
-    </ion-list>
+    <ion-item *ngIf="etapa == 'loginEmail'">
+      <ion-label stacked> <ion-icon name="ios-lock-outline"></ion-icon> Senha</ion-label>
+      <ion-input type="password" formControlName="password" required></ion-input>
+    </ion-item>
 
     <ion-row *ngIf="etapa == 'tipoLogin'">
       <ion-col center text-center>
-        <button type="submit" (click)="etapa = 'loginEmail'" ion-button color="utilizando" round>
+        <button (click)="etapa = 'loginEmail'" ion-button color="utilizando" round>
           <strong>Cadastrar</strong>
         </button>
       </ion-col>
