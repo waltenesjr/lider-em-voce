@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import {EscolhaPage} from '../utilizando/escolha/escolha';
+import {Component} from '@angular/core';
+import {NavController, NavParams} from 'ionic-angular';
 import {AutoliderancaPage} from './autolideranca/autolideranca';
 import {AutosabotagemPage} from './autosabotagem/autosabotagem';
 import {ComparacaoPage} from './comparacao/comparacao';
@@ -20,7 +19,7 @@ import {VitimizacaoPage} from './vitimizacao/vitimizacao';
 
 @Component({
   selector: 'page-atualizar',
-  templateUrl: 'atualizar.html',
+  templateUrl: 'atualizar.html'
 })
 export class AtualizarPage {
 

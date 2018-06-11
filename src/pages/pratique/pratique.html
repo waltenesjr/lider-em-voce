@@ -10,9 +10,60 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="background">
-  <ion-slides pager>
-    <!-- Tempo pró ativo -->
+<ion-content padding>
+  <ion-list>
+    <ion-item class="transparente" (click)="goTempo()">
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/pratique/menu/tempo.png">
+      </ion-thumbnail>
+      <h2>Tempo pró ativo</h2>
+      <p>Durante 70 dias estabeleça um tempo coerente com sua realidade (30 minutos, 1 hora)...</p>
+    </ion-item>
+
+    <ion-item class="transparente" (click)="goDiario()">
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/pratique/menu/escrita.png">
+      </ion-thumbnail>
+      <h2>Diário pró ativo</h2>
+      <p>Neste tempo estabelecido e cumprido por você, faça um diário pró ativo...</p>
+    </ion-item>
+
+    <ion-item class="transparente" (click)="goAlternativa()">
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/pratique/menu/alternativas.png">
+      </ion-thumbnail>
+      <h2>Alternativas pró ativas</h2>
+      <p>No seu tempo, tendo escrito seu planejamento concreto, estabelecendo seus objetivos...</p>
+    </ion-item>
+
+    <ion-item class="transparente" (click)="goAtitude()">
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/pratique/menu/atitude.png">
+      </ion-thumbnail>
+      <h2>Atitude pró ativa</h2>
+      <p>A partir dos três primeiros passos indicados anteriormente, identifique suas possibilidades...</p>
+    </ion-item>
+
+    <ion-item class="transparente" (click)="goFoco()">
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/pratique/menu/foco.png">
+      </ion-thumbnail>
+      <h2>Foco/Disciplina/Determinação pró ativos</h2>
+      <p>Estas três características já descritas no item 1G (Que possibilidades pode utilizar?)...</p>
+    </ion-item>
+
+    <ion-item class="transparente" (click)="goAutocritica()">
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/pratique/menu/autocritica.png">
+      </ion-thumbnail>
+      <h2>Auto crítica pró ativa</h2>
+      <p>A característica da auto crítica pró ativa é extremamente funcional no processo de encontro...</p>
+    </ion-item>
+  </ion-list>
+
+
+  <!--<ion-slides pager>
+    &lt;!&ndash; Tempo pró ativo &ndash;&gt;
     <ion-slide>
       <img src="assets/imgs/menu/Recursos.png">
       <div text-left>
@@ -24,7 +75,7 @@
       </div>
     </ion-slide>
 
-    <!-- Escrita pró ativa -->
+    &lt;!&ndash; Escrita pró ativa &ndash;&gt;
     <ion-slide>
       <img src="assets/imgs/menu/Recursos.png">
       <div text-left>
@@ -38,7 +89,7 @@
       </div>
     </ion-slide>
 
-    <!-- Alternativas pró ativas -->
+    &lt;!&ndash; Alternativas pró ativas &ndash;&gt;
     <ion-slide>
       <img src="assets/imgs/menu/Recursos.png">
       <div text-left>
@@ -62,7 +113,7 @@
       </div>
     </ion-slide>
 
-    <!-- Atitude pró ativa -->
+    &lt;!&ndash; Atitude pró ativa &ndash;&gt;
     <ion-slide>
       <img src="assets/imgs/menu/Recursos.png">
       <div text-left>
@@ -75,7 +126,7 @@
       </div>
     </ion-slide>
 
-    <!-- Foco/Disciplina/Determinação pró ativos -->
+    &lt;!&ndash; Foco/Disciplina/Determinação pró ativos &ndash;&gt;
     <ion-slide>
       <img src="assets/imgs/menu/Recursos.png">
       <div text-left>
@@ -93,7 +144,7 @@
       </div>
     </ion-slide>
 
-    <!-- Auto crítica pró ativa -->
+    &lt;!&ndash; Auto crítica pró ativa &ndash;&gt;
     <ion-slide>
       <img src="assets/imgs/menu/Recursos.png">
       <div text-left>
@@ -106,5 +157,5 @@
         </p>
       </div>
     </ion-slide>
-  </ion-slides>
+  </ion-slides>-->
 </ion-content>
