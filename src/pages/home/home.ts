@@ -26,7 +26,7 @@ export class HomePage {
     this.storage.get('primeiroAcesso').then((val) => {
       if (!val) {
         let toast = this.toastCtrl.create({
-          duration: 500,
+          duration: 5000,
           position: 'bottom',
           closeButtonText: 'OK',
           showCloseButton: true

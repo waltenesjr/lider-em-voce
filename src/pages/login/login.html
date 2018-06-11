@@ -30,6 +30,7 @@
     <ion-row *ngIf="etapa == 'tipoLogin'">
       <ion-col center text-center>
         <button (click)="etapa = 'loginEmail'" ion-button color="utilizando" round>
+          <ion-icon ios="ios-person" md="md-person"></ion-icon>
           <strong>Cadastrar</strong>
         </button>
       </ion-col>
@@ -37,6 +38,7 @@
     <ion-row *ngIf="etapa == 'loginEmail'">
       <ion-col center text-center>
         <button type="submit" (click)="createEmail()" ion-button color="utilizando" round>
+          <ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon>
           <strong>Entrar</strong>
         </button>
       </ion-col>
@@ -44,6 +46,7 @@
     <ion-row *ngIf="etapa == 'loginEmail'">
       <ion-col center text-center>
         <button (click)="etapa = 'tipoLogin'" ion-button color="seu-lider" round>
+          <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
           <strong>Voltar</strong>
         </button>
       </ion-col>
