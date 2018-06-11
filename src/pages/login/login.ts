@@ -43,7 +43,12 @@ export class LoginPage {
   }
 
   createEmail(): void {
-    let toast = this.toastCtrl.create({duration: 3000, position: 'middle', closeButtonText: 'OK', showCloseButton: true});
+    let toast = this.toastCtrl.create({
+      duration: 3000,
+      position: 'middle',
+      closeButtonText: 'OK',
+      showCloseButton: true
+    });
     if (this.form.valid) {
       let user = new User(this.form.controls['email'].value, this.form.controls['password'].value);
       this.authService.createUser(user).then((user: any) => {
