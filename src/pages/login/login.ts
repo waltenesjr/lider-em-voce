@@ -34,6 +34,10 @@ export class LoginPage {
     this.etapa = 'tipoLogin';
   }
 
+  ionViewDidLoad() {
+    alert('teste load');
+  }
+
   initForm(): void {
     this.fb = this.injector.get(FormBuilder);
     this.form = this.fb.group({
