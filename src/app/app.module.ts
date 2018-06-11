@@ -45,7 +45,10 @@ import {TempoPage} from '../pages/pratique/tempo/tempo';
 import {VideoPage} from '../pages/video/video';
 import {RecursoPage} from '../pages/recurso/recurso';
 import {ImportantePage} from '../pages/importante/importante';
-import {LiderjaPage} from "../pages/liderja/liderja";
+import {LiderjaPage} from '../pages/liderja/liderja';
+import {FilmesPage} from '../pages/recurso/filmes/filmes';
+import {MusicasPage} from '../pages/recurso/musicas/musicas';
+import {LeituraPage} from '../pages/recurso/leitura/leitura';
 
 const fireBaseConfig = {
   apiKey: 'AIzaSyC4ETJq4Ox5iToDwOROeIQf11WjVVzrfeQ',
@@ -64,7 +67,6 @@ const fireBaseConfig = {
     PerfilPage,
     LiderjaPage,
     VideoPage,
-    RecursoPage,
     ImportantePage,
     // Utilizando o aplicativo
     UtilizandoPage,
@@ -95,7 +97,12 @@ const fireBaseConfig = {
     AutocriticaPage,
     DiarioPage,
     FocoPage,
-    TempoPage
+    TempoPage,
+    // Recursos pró ativos
+    RecursoPage,
+    FilmesPage,
+    MusicasPage,
+    LeituraPage
   ],
   imports: [
     BrowserModule,
@@ -112,7 +119,6 @@ const fireBaseConfig = {
     PerfilPage,
     LiderjaPage,
     VideoPage,
-    RecursoPage,
     ImportantePage,
     // Utilizando o aplicativo
     UtilizandoPage,
@@ -143,7 +149,12 @@ const fireBaseConfig = {
     AutocriticaPage,
     DiarioPage,
     FocoPage,
-    TempoPage
+    TempoPage,
+    // Recursos pró ativos
+    RecursoPage,
+    FilmesPage,
+    MusicasPage,
+    LeituraPage
   ],
   providers: [
     StatusBar,
