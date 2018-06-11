@@ -9,7 +9,15 @@ import {Storage} from '@ionic/storage';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  styles: [`
+    .scroll-content {
+      background: url("../../assets/imgs/back.png") no-repeat center center fixed;
+      /*-webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;*/
+    }
+  `]
 })
 export class HomePage {
 
