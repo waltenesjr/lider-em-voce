@@ -6,7 +6,7 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {HomePage} from '../pages/home/home';
 import {Storage} from '@ionic/storage';
 import {LoginPage} from '../pages/login/login';
-import {Push, PushObject, PushOptions} from "@ionic-native/push";
+import {Push, PushObject, PushOptions} from '@ionic-native/push';
 
 @Component({
   templateUrl: 'app.html'
@@ -21,7 +21,17 @@ export class MyApp {
               public statusBar: StatusBar,
               public splashScreen: SplashScreen) {
     this.initializeApp();
+  }
+
+  initializeApp() {
     this.redirecionar();
+    this.configPush();
+    this.platform.ready().then(() => {
+      // Okay, so the platform is ready and our plugins are available.
+      // Here you can do any higher level native things you might need.
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
+    });
   }
 
   redirecionar() {
@@ -31,16 +41,6 @@ export class MyApp {
       } else {
         this.rootPage = LoginPage;
       }
-    });
-  }
-
-  initializeApp() {
-    this.configPush();
-    this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
     });
   }
 
