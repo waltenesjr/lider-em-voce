@@ -19,9 +19,6 @@ export class HomePage {
   constructor(public navCtrl: NavController,
               private storage: Storage,
               private toastCtrl: ToastController) {
-  }
-
-  ionViewDidLoad() {
     this.primeiroAcesso();
   }
 

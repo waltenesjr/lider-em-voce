@@ -30,9 +30,6 @@ export class LoginPage {
               private toastCtrl: ToastController,
               public navCtrl: NavController,
               public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
     this.initForm();
     this.etapa = 'tipoLogin';
   }
