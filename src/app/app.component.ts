@@ -64,7 +64,6 @@ export class MyApp {
           }
         };
 
-        alert(JSON.stringify(options))
         const pushObject: PushObject = this.push.init(options);
 
         pushObject.on('notification').subscribe((notification: any) => {
