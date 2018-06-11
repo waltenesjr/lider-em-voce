@@ -45,6 +45,7 @@ import {TempoPage} from '../pages/pratique/tempo/tempo';
 import {VideoPage} from '../pages/video/video';
 import {RecursoPage} from '../pages/recurso/recurso';
 import {ImportantePage} from '../pages/importante/importante';
+import {LiderjaPage} from "../pages/liderja/liderja";
 
 const fireBaseConfig = {
   apiKey: 'AIzaSyC4ETJq4Ox5iToDwOROeIQf11WjVVzrfeQ',
@@ -61,7 +62,7 @@ const fireBaseConfig = {
     HomePage,
     LoginPage,
     PerfilPage,
-    LiderPage,
+    LiderjaPage,
     VideoPage,
     RecursoPage,
     ImportantePage,
@@ -109,7 +110,7 @@ const fireBaseConfig = {
     HomePage,
     LoginPage,
     PerfilPage,
-    LiderPage,
+    LiderjaPage,
     VideoPage,
     RecursoPage,
     ImportantePage,
