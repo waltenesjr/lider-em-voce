@@ -5,8 +5,7 @@
     </ion-title>
     <ion-buttons end>
       <button (click)="continue()" ion-button>
-        <!--<ion-icon ios="ios-close" md="md-close"></ion-icon>-->
-        <ion-icon ios="ios-close-circle" md="md-close-circle"></ion-icon>
+        <ion-icon ios="ios-close" md="md-close"></ion-icon>
       </button>
     </ion-buttons>
   </ion-toolbar>
@@ -30,25 +29,25 @@
 
     <ion-row *ngIf="etapa == 'tipoLogin'">
       <ion-col center text-center>
-        <button (click)="etapa = 'loginEmail'" ion-button color="utilizando" round>
+        <button (click)="etapa = 'loginEmail'" ion-button color="utilizando" round icon-start>
           <ion-icon ios="ios-person" md="md-person"></ion-icon>
-          <strong> Cadastrar</strong>
+          <strong>Cadastrar</strong>
         </button>
       </ion-col>
     </ion-row>
     <ion-row *ngIf="etapa == 'loginEmail'">
       <ion-col center text-center>
-        <button type="submit" (click)="createEmail()" ion-button color="utilizando" round>
+        <button type="submit" (click)="createEmail()" ion-button color="utilizando" round icon-start>
           <ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon>
-          <strong> Entrar</strong>
+          <strong>Entrar</strong>
         </button>
       </ion-col>
     </ion-row>
     <ion-row *ngIf="etapa == 'loginEmail'">
       <ion-col center text-center>
-        <button (click)="etapa = 'tipoLogin'" ion-button color="seu-lider" round>
+        <button (click)="etapa = 'tipoLogin'" ion-button color="seu-lider" round icon-start>
           <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
-          <strong> Voltar</strong>
+          <strong>Voltar</strong>
         </button>
       </ion-col>
     </ion-row>
