@@ -11,5 +11,29 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-list>
+    <ion-item class="transparente" (click)="openLeitura()">
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/recurso/menu/leitura.png">
+      </ion-thumbnail>
+      <h2>Leituras pró ativas</h2>
+      <p>Ter boas referências bibliográficas ao seu alcance é sempre transformador...</p>
+    </ion-item>
 
+    <ion-item class="transparente" (click)="openFilme()">
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/recurso/menu/filmes.png">
+      </ion-thumbnail>
+      <h2>Filmes pró ativos</h2>
+      <p>Outra excelente e agregadora alternativa de se ampliar seu conhecimento é assistir a bons filmes...</p>
+    </ion-item>
+
+    <ion-item class="transparente" (click)="openMusica()">
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/recurso/menu/musica.png">
+      </ion-thumbnail>
+      <h2>Músicas pró ativas</h2>
+      <p>Ouvir música é um hábito mundialmente praticado. Músicas definem estilos pessoais...</p>
+    </ion-item>
+  </ion-list>
 </ion-content>

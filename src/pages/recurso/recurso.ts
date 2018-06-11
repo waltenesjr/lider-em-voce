@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {NavController, NavParams} from 'ionic-angular';
+import {FilmesPage} from './filmes/filmes';
+import {LeituraPage} from './leitura/leitura';
+import {MusicasPage} from './musicas/musicas';
 
 /**
  * Generated class for the RecursoPage page.
@@ -10,11 +13,23 @@ import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-recurso',
-  templateUrl: 'recurso.html',
+  templateUrl: 'recurso.html'
 })
 export class RecursoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  openLeitura() {
+    this.navCtrl.push(LeituraPage);
+  }
+
+  openFilme() {
+    this.navCtrl.push(FilmesPage);
+  }
+
+  openMusica() {
+    this.navCtrl.push(MusicasPage);
   }
 
   ionViewDidLoad() {
