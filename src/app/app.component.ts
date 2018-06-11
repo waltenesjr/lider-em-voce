@@ -24,10 +24,6 @@ export class MyApp {
     this.redirecionar();
   }
 
-  ionViewDidLoad() {
-    alert('teste load');
-  }
-
   redirecionar() {
     this.storage.get('cadastrado').then((val) => {
       if (val) {
