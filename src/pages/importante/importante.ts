@@ -34,6 +34,7 @@ export class ImportantePage {
   }
 
   enviar(): void {
+    alert(JSON.stringify(this.form.value));
     let toast = this.toastCtrl.create({
       duration: 3000,
       position: 'middle',
