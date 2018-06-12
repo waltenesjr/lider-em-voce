@@ -11,81 +11,85 @@
 </ion-header>
 
 <ion-content padding>
-  <div padding-bottom padding-top></div>
-  <ion-list padding-top radio-group>
-    <h4>1 – Este App está sendo útil para você?</h4>
+  <form [formGroup]="form">
+    <div padding-bottom padding-top></div>
+    <ion-list padding-top radio-group formControlName="pergunta1">
+      <h4>1 – Este App está sendo útil para você?</h4>
 
-    <ion-item class="transparente">
-      <ion-label>Sim</ion-label>
-      <ion-radio value="a"></ion-radio>
-    </ion-item>
+      <ion-item class="transparente">
+        <ion-label>Sim</ion-label>
+        <ion-radio value="a"></ion-radio>
+      </ion-item>
 
-    <ion-item class="transparente">
-      <ion-label>Não</ion-label>
-      <ion-radio value="b"></ion-radio>
-    </ion-item>
+      <ion-item class="transparente">
+        <ion-label>Não</ion-label>
+        <ion-radio value="b"></ion-radio>
+      </ion-item>
+    </ion-list>
 
     <h4>Por quê?</h4>
-    <ion-item>
+    <ion-item formControlName="pergunta2">
       <ion-input type="text"></ion-input>
     </ion-item>
-  </ion-list>
 
-  <ion-list padding-top radio-group>
-    <h4>2 – Enumere de 1 a 7 o que você MAIS gostou e o que você MENOS gostou no App, sendo 7 para o que MAIS gostou e 1
-      para o que MENOS gostou.</h4>
+    <ion-list padding-top radio-group formControlName="pergunta3">
+      <h4>2 – Enumere de 1 a 7 o que você MAIS gostou e o que você MENOS gostou no App, sendo 7 para o que MAIS gostou e 1
+        para o que MENOS gostou.</h4>
 
-    <ion-item class="transparente">
-      <ion-label>Utilizando o aplicativo</ion-label>
-      <ion-radio value="a"></ion-radio>
+      <ion-item class="transparente">
+        <ion-label>Utilizando o aplicativo</ion-label>
+        <ion-radio value="a"></ion-radio>
+      </ion-item>
+
+      <ion-item class="transparente">
+        <ion-label>Saiba seu Perfil de líder</ion-label>
+        <ion-radio value="c"></ion-radio>
+      </ion-item>
+
+      <ion-item class="transparente">
+        <ion-label>Atualizar Crenças</ion-label>
+        <ion-radio value="d"></ion-radio>
+      </ion-item>
+
+      <ion-item class="transparente">
+        <ion-label>Seja seu líder já</ion-label>
+        <ion-radio value="e"></ion-radio>
+      </ion-item>
+
+      <ion-item class="transparente">
+        <ion-label>Pratique sua Autoliderança emocional</ion-label>
+        <ion-radio value="f"></ion-radio>
+      </ion-item>
+
+      <ion-item class="transparente">
+        <ion-label>Vídeos pró ativos</ion-label>
+        <ion-radio value="g"></ion-radio>
+      </ion-item>
+
+      <ion-item class="transparente">
+        <ion-label>Recursos pró ativos</ion-label>
+        <ion-radio value="h"></ion-radio>
+      </ion-item>
+    </ion-list>
+
+    <h4>3 – O que você gostaria que fosse incluído neste aplicativo?</h4>
+    <ion-item>
+      <ion-input formControlName="pergunta4" type="text"></ion-input>
     </ion-item>
 
-    <ion-item class="transparente">
-      <ion-label>Saiba seu Perfil de líder</ion-label>
-      <ion-radio value="c"></ion-radio>
+    <h4>4 – Críticas e Sugestões.</h4>
+    <ion-item>
+      <ion-input formControlName="pergunta5" type="text"></ion-input>
     </ion-item>
 
-    <ion-item class="transparente">
-      <ion-label>Atualizar Crenças</ion-label>
-      <ion-radio value="d"></ion-radio>
-    </ion-item>
+    <ion-row>
+      <ion-col center text-center>
+        <button (click)="enviar()" ion-button color="seu-lider" round icon-start>
+          <strong>Enviar</strong>
+        </button>
+      </ion-col>
+    </ion-row>
+  </form>
 
-    <ion-item class="transparente">
-      <ion-label>Seja seu líder já</ion-label>
-      <ion-radio value="e"></ion-radio>
-    </ion-item>
-
-    <ion-item class="transparente">
-      <ion-label>Pratique sua Autoliderança emocional</ion-label>
-      <ion-radio value="f"></ion-radio>
-    </ion-item>
-
-    <ion-item class="transparente">
-      <ion-label>Vídeos pró ativos</ion-label>
-      <ion-radio value="g"></ion-radio>
-    </ion-item>
-
-    <ion-item class="transparente">
-      <ion-label>Recursos pró ativos</ion-label>
-      <ion-radio value="h"></ion-radio>
-    </ion-item>
-  </ion-list>
-
-  <h4>3 – O que você gostaria que fosse incluído neste aplicativo?</h4>
-  <ion-item>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-
-  <h4>4 – Críticas e Sugestões.</h4>
-  <ion-item>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-
-  <ion-row>
-    <ion-col center text-center>
-      <button ion-button color="seu-lider" round icon-start>
-        <strong>Enviar</strong>
-      </button>
-    </ion-col>
-  </ion-row>
+  <div padding-bottom padding-top></div>
 </ion-content>

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import {Component, Injector} from '@angular/core';
+import {NavController, NavParams, ToastController} from 'ionic-angular';
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 /**
  * Generated class for the ImportantePage page.
@@ -10,15 +11,41 @@ import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-importante',
-  templateUrl: 'importante.html',
+  templateUrl: 'importante.html'
 })
 export class ImportantePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public form: FormGroup;
+  public fb: FormBuilder;
+
+  constructor(private toastCtrl: ToastController, private injector: Injector, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ImportantePage');
+    this.initForm();
   }
 
+  initForm(): void {
+    this.fb = this.injector.get(FormBuilder);
+    this.form = this.fb.group({
+      pergunta1: this.fb.control(null),
+      pergunta2: this.fb.control(null),
+      pergunta3: this.fb.control(null),
+      pergunta4: this.fb.control(null),
+      pergunta5: this.fb.control(null)
+    });
+  }
+
+  enviar(): void {
+    let toast = this.toastCtrl.create({
+      duration: 3000,
+      position: 'middle',
+      closeButtonText: 'OK',
+      showCloseButton: true
+    });
+    toast.setMessage('Usuário cadastrado com sucesso');
+    toast.present();
+    alert(JSON.stringify(this.form));
+    this.form.reset();
+  }
 }
