@@ -19,9 +19,6 @@ export class ImportantePage {
   public fb: FormBuilder;
 
   constructor(private toastCtrl: ToastController, private injector: Injector, public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
     this.initForm();
   }
 
@@ -37,6 +34,7 @@ export class ImportantePage {
   }
 
   enviar(): void {
+    alert(JSON.stringify(this.form));
     let toast = this.toastCtrl.create({
       duration: 3000,
       position: 'middle',
@@ -45,7 +43,6 @@ export class ImportantePage {
     });
     toast.setMessage('Usuário cadastrado com sucesso');
     toast.present();
-    alert(JSON.stringify(this.form));
     this.form.reset();
   }
 }
