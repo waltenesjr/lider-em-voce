@@ -12,7 +12,7 @@
 
 <ion-content padding>
   <div padding-bottom padding-top></div>
-  <ion-list padding-top radio-group *ngIf="etapa == 1" (ionChange)="changeList($event)">
+  <ion-list padding-top radio-group>
     <h4>1 – Este App está sendo útil para você?</h4>
 
     <ion-item class="transparente">
@@ -24,14 +24,13 @@
       <ion-label>Não</ion-label>
       <ion-radio value="b"></ion-radio>
     </ion-item>
-
-    <ion-item>
-      <ion-label stacked>Por quê?</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
   </ion-list>
+  <ion-item>
+    <ion-label stacked>Por quê?</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
 
-  <ion-list padding-top radio-group *ngIf="etapa == 1" (ionChange)="changeList($event)">
+  <ion-list padding-top radio-group>
     <h4>2 – Enumere de 1 a 7 o que você MAIS gostou e o que você MENOS gostou no App, sendo 7 para o que MAIS gostou e 1
       para o que MENOS gostou.</h4>
 
@@ -42,32 +41,32 @@
 
     <ion-item class="transparente">
       <ion-label>Saiba seu Perfil de líder</ion-label>
-      <ion-radio value="b"></ion-radio>
+      <ion-radio value="c"></ion-radio>
     </ion-item>
 
     <ion-item class="transparente">
       <ion-label>Atualizar Crenças</ion-label>
-      <ion-radio value="b"></ion-radio>
+      <ion-radio value="d"></ion-radio>
     </ion-item>
 
     <ion-item class="transparente">
       <ion-label>Seja seu líder já</ion-label>
-      <ion-radio value="b"></ion-radio>
+      <ion-radio value="e"></ion-radio>
     </ion-item>
 
     <ion-item class="transparente">
       <ion-label>Pratique sua Autoliderança emocional</ion-label>
-      <ion-radio value="b"></ion-radio>
+      <ion-radio value="f"></ion-radio>
     </ion-item>
 
     <ion-item class="transparente">
       <ion-label>Vídeos pró ativos</ion-label>
-      <ion-radio value="b"></ion-radio>
+      <ion-radio value="g"></ion-radio>
     </ion-item>
 
     <ion-item class="transparente">
       <ion-label>Recursos pró ativos</ion-label>
-      <ion-radio value="b"></ion-radio>
+      <ion-radio value="h"></ion-radio>
     </ion-item>
   </ion-list>
 
