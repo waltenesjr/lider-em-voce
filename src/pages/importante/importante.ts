@@ -34,14 +34,13 @@ export class ImportantePage {
   }
 
   enviar(): void {
-    alert(JSON.stringify(this.form));
     let toast = this.toastCtrl.create({
       duration: 3000,
       position: 'middle',
       closeButtonText: 'OK',
       showCloseButton: true
     });
-    toast.setMessage('Usuário cadastrado com sucesso');
+    toast.setMessage('Sugestões enviadas com sucesso!');
     toast.present();
     this.form.reset();
   }
