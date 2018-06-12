@@ -5,6 +5,7 @@ import {Storage} from '@ionic/storage';
 import {User} from '../../providers/auth/user';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from '../../providers/auth/auth-service';
+import {Facebook, FacebookLoginResponse} from '@ionic-native/facebook';
 
 /**
  * Generated class for the LoginPage page.
@@ -28,6 +29,7 @@ export class LoginPage {
               private authService: AuthService,
               private storage: Storage,
               private toastCtrl: ToastController,
+              private facebook: Facebook,
               public navCtrl: NavController,
               public navParams: NavParams) {
     this.initForm();
@@ -67,14 +69,22 @@ export class LoginPage {
 
   createFacebook() {
     let toast = this.toastCtrl.create({duration: 3000, position: 'bottom', showCloseButton: true});
-    this.authService.createUserFacebook().then((user: any) => {
-      toast.setMessage('Usuário cadastrado com sucesso');
-      toast.present();
-      this.continue();
-    }).catch((error: any) => {
-      toast.setMessage('Erro ao cadastrar usuário - ' + error.message);
-      toast.present();
+    return this.facebook.login(['email', 'public_profile']).then((res: FacebookLoginResponse) => {
+      this.facebook.api('me?fields=id,name, email', []).then(profile => {
+        let user = new User(profile['email'], '15845514');
+        alert(JSON.stringify(user));
+        this.authService.createUser(user).then((user: any) => {
+          toast.setMessage('Usuário cadastrado com sucesso');
+          toast.present();
+          this.continue();
+        }).catch((error: any) => {
+          toast.setMessage('Erro ao cadastrar usuário - ' + error.message);
+          toast.present();
+        });
+      });
     });
+
+
   }
 
   continue(): void {

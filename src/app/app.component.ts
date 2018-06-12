@@ -24,10 +24,10 @@ export class MyApp {
   }
 
   initializeApp() {
+    this.redirecionar();
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      this.redirecionar();
       this.configPush();
     });
   }
