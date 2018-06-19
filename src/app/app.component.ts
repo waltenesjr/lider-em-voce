@@ -32,7 +32,7 @@ export class MyApp {
     });
   }
 
-  redirecionar() {
+  redirecionar(): void {
     this.storage.get('cadastrado').then((val) => {
       if (val) {
         this.rootPage = HomePage;
@@ -47,9 +47,8 @@ export class MyApp {
       if (res.isEnabled) {
         const options: PushOptions = {
           android: {
-            sound: true,
             vibrate: true,
-            icon: 'notification_icon'
+            icon: '@drawable/icon'
           },
           ios: {
             alert: 'true',
