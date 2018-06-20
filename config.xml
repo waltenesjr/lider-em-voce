@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.lideremmimonline.Lideremmim" version="3.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.lideremmimonline.Lideremmim" version="3.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Líder em você</name>
     <description>Líder em você</description>
     <author email="waltenesjr@live.com" href="https://www.linkedin.com/in/waltenesjr/">Waltenes Jr.</author>
@@ -84,6 +84,7 @@
     <plugin name="cordova-sqlite-storage" spec="^2.3.1" />
     <platform name="android">
         <resource-file src="google-services.json" target="app/google-services.json" />
+        <resource-file src="src/assets/imgs/notification.png" target="app/src/main/res/drawable/notification.png" />
     </platform>
     <plugin name="phonegap-plugin-push" spec="^2.2.3">
         <variable name="SENDER_ID" value="458382218721" />
@@ -93,5 +94,5 @@
         <variable name="APP_NAME" value="Líder em você" />
         <variable name="ANDROID_SDK_VERSION" value="4.+" />
     </plugin>
-    <engine name="android" spec="~7.1.0" />
+    <engine name="android" spec="7.1.0" />
 </widget>
