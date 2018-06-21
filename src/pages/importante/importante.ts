@@ -27,13 +27,13 @@ export class ImportantePage {
     this.form = this.fb.group({
       pergunta1: this.fb.control(null),
       pergunta2: this.fb.control(null),
-      notaUtilizando: this.fb.control(0),
-      notaPerfil: this.fb.control(0),
-      notaAtualizar: this.fb.control(0),
-      notaSeja: this.fb.control(0),
-      notaPratique: this.fb.control(0),
-      notaVideos: this.fb.control(0),
-      notaRecursos: this.fb.control(0),
+      notaUtilizando: this.fb.control(1),
+      notaPerfil: this.fb.control(1),
+      notaAtualizar: this.fb.control(1),
+      notaSeja: this.fb.control(1),
+      notaPratique: this.fb.control(1),
+      notaVideos: this.fb.control(1),
+      notaRecursos: this.fb.control(1),
       pergunta3: this.fb.control(null),
       pergunta4: this.fb.control(null)
     });
