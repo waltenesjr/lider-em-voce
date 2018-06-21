@@ -47,8 +47,6 @@ export class MyApp {
       if (res.isEnabled) {
         const options: PushOptions = {
           android: {
-            icon: 'notification',
-            iconColor: 'blue'
           },
           ios: {
             alert: 'true',
