@@ -61,9 +61,4 @@ export class AtualizarPage {
   goVitimizacao() {
     this.navCtrl.push(VitimizacaoPage);
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AtualizarPage');
-  }
-
 }
