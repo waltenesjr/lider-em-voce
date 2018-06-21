@@ -6,9 +6,8 @@
 
 <ion-content padding>
   <form [formGroup]="form">
-    <div padding-bottom padding-top></div>
     <ion-list padding-top radio-group formControlName="pergunta1">
-      <h4>1 – Este App está sendo útil para você?</h4>
+      <h5>1 – Este App está sendo útil para você?</h5>
 
       <ion-item class="transparente">
         <ion-label>Sim</ion-label>
@@ -21,13 +20,15 @@
       </ion-item>
     </ion-list>
 
-    <h4>Por quê?</h4>
+    <h5>Por quê?</h5>
     <ion-item formControlName="pergunta2">
       <ion-input type="text"></ion-input>
     </ion-item>
 
-    <h4>2 – Enumere de 1 a 7 o que você MAIS gostou e o que você MENOS gostou no App, sendo 7 para o que MAIS gostou e 1
-      para o que MENOS gostou.</h4>
+    <h5>
+      2 – Enumere de 1 a 7 o que você MAIS gostou e o que você MENOS gostou no App, sendo 7 para o que MAIS gostou e 1
+      para o que MENOS gostou.
+    </h5>
 
     <ion-item>
       <ion-label><strong>Utilizando o aplicativo</strong></ion-label>
@@ -78,12 +79,12 @@
       </ion-range>
     </ion-item>
 
-    <h4>3 – O que você gostaria que fosse incluído neste aplicativo?</h4>
+    <h5>3 – O que você gostaria que fosse incluído neste aplicativo?</h5>
     <ion-item>
       <ion-input formControlName="pergunta3" type="text"></ion-input>
     </ion-item>
 
-    <h4>4 – Críticas e Sugestões.</h4>
+    <h5>4 – Críticas e Sugestões.</h5>
     <ion-item>
       <ion-input formControlName="pergunta4" type="text"></ion-input>
     </ion-item>
