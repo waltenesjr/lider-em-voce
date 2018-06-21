@@ -27,6 +27,13 @@ export class ImportantePage {
     this.form = this.fb.group({
       pergunta1: this.fb.control(null),
       pergunta2: this.fb.control(null),
+      notaUtilizando: this.fb.control(null),
+      notaPerfil: this.fb.control(null),
+      notaAtualizar: this.fb.control(null),
+      notaSeja: this.fb.control(null),
+      notaPratique: this.fb.control(null),
+      notaVideos: this.fb.control(null),
+      notaRecursos: this.fb.control(null),
       pergunta3: this.fb.control(null),
       pergunta4: this.fb.control(null),
       pergunta5: this.fb.control(null)
