@@ -1,9 +1,3 @@
-<!--
-  Generated template for the ImportantePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
   <ion-navbar color="importante">
     <ion-title>Você é muito importante</ion-title>
@@ -36,68 +30,62 @@
       para o que MENOS gostou.</h4>
 
     <ion-item>
-      <ion-label>Utilizando o aplicativo</ion-label>
+      <ion-label><strong>Utilizando o aplicativo</strong></ion-label>
       <ion-range min="0" max="7" color="importante" formControlName="notaUtilizando" snaps="true">
         <ion-label range-right>{{ form.controls['notaUtilizando'].value }}</ion-label>
       </ion-range>
     </ion-item>
 
     <ion-item>
-      <ion-label>Saiba seu Perfil de líder</ion-label>
-      <ion-range min="0" max="7" color="importante">
-        <ion-label range-left>0</ion-label>
-        <ion-label range-right>7</ion-label>
+      <ion-label><strong>Saiba seu Perfil de líder</strong></ion-label>
+      <ion-range min="0" max="7" color="importante" formControlName="notaPerfil" snaps="true">
+        <ion-label range-right>{{ form.controls['notaPerfil'].value }}</ion-label>
       </ion-range>
     </ion-item>
 
     <ion-item>
-      <ion-label>Atualizar Crenças</ion-label>
-      <ion-range min="0" max="7" color="importante">
-        <ion-label range-left>0</ion-label>
-        <ion-label range-right>7</ion-label>
+      <ion-label><strong>Atualizar Crenças</strong></ion-label>
+      <ion-range min="0" max="7" color="importante" formControlName="notaAtualizar" snaps="true">
+        <ion-label range-right>{{ form.controls['notaAtualizar'].value }}</ion-label>
       </ion-range>
     </ion-item>
 
     <ion-item>
-      <ion-label>Seja seu líder já</ion-label>
-      <ion-range min="0" max="7" color="importante">
-        <ion-label range-left>0</ion-label>
-        <ion-label range-right>7</ion-label>
+      <ion-label><strong>Seja seu líder já</strong></ion-label>
+      <ion-range min="0" max="7" color="importante" formControlName="notaSeja" snaps="true">
+        <ion-label range-right>{{ form.controls['notaSeja'].value }}</ion-label>
       </ion-range>
     </ion-item>
 
     <ion-item>
-      <ion-label>Pratique sua Autoliderança emocional</ion-label>
-      <ion-range min="0" max="7" color="importante">
-        <ion-label range-left>0</ion-label>
-        <ion-label range-right>7</ion-label>
+      <ion-label><strong>Pratique sua Autoliderança emocional</strong></ion-label>
+      <ion-range min="0" max="7" color="importante" formControlName="notaPratique" snaps="true">
+        <ion-label range-right>{{ form.controls['notaPratique'].value }}</ion-label>
       </ion-range>
     </ion-item>
 
     <ion-item>
-      <ion-label>Vídeos pró ativos</ion-label>
-      <ion-range min="0" max="7" color="importante">
-        <ion-label range-left>0</ion-label>
-        <ion-label range-right>7</ion-label>
+      <ion-label><strong>Vídeos pró ativos</strong></ion-label>
+      <ion-range min="0" max="7" color="importante" formControlName="notaVideos" snaps="true">
+        <ion-label range-right>{{ form.controls['notaVideos'].value }}</ion-label>
       </ion-range>
     </ion-item>
 
     <ion-item>
-      <ion-label>Recursos pró ativos</ion-label>
-      <ion-range min="0" max="7" color="importante">
-        <ion-label range-left>0</ion-label>
-        <ion-label range-right>7</ion-label>
+      <ion-label><strong>Recursos pró ativos</strong></ion-label>
+      <ion-range min="0" max="7" color="importante" formControlName="notaRecursos" snaps="true">
+        <ion-label range-right>{{ form.controls['notaRecursos'].value }}</ion-label>
       </ion-range>
     </ion-item>
 
     <h4>3 – O que você gostaria que fosse incluído neste aplicativo?</h4>
     <ion-item>
-      <ion-input formControlName="pergunta4" type="text"></ion-input>
+      <ion-input formControlName="pergunta3" type="text"></ion-input>
     </ion-item>
 
     <h4>4 – Críticas e Sugestões.</h4>
     <ion-item>
-      <ion-input formControlName="pergunta5" type="text"></ion-input>
+      <ion-input formControlName="pergunta4" type="text"></ion-input>
     </ion-item>
 
     <ion-row>
