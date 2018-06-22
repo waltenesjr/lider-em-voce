@@ -57,6 +57,7 @@ export class LoginPage {
         toast.setMessage('Usuário cadastrado com sucesso');
         toast.present();
         this.continue();
+        this.storage.set('cadastrado', true);
       }).catch((error: any) => {
         toast.setMessage('Erro ao cadastrar usuário - ' + error.message);
         toast.present();
@@ -86,7 +87,6 @@ export class LoginPage {
   }
 
   continue(): void {
-    this.storage.set('cadastrado', true);
     this.navCtrl.setRoot(HomePage);
   }
 }
