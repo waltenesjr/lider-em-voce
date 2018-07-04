@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Platform} from 'ionic-angular';
+import {Platform, ToastController} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 
@@ -19,7 +19,8 @@ export class MyApp {
               private storage: Storage,
               public platform: Platform,
               public statusBar: StatusBar,
-              public splashScreen: SplashScreen) {
+              public splashScreen: SplashScreen,
+              private toastCtrl: ToastController) {
     this.initializeApp();
   }
 
@@ -62,7 +63,13 @@ export class MyApp {
         const pushObject: PushObject = this.push.init(options);
 
         pushObject.on('notification').subscribe((notification: any) => {
-          alert(notification.message);
+          let toast = this.toastCtrl.create({
+            position: 'middle',
+            closeButtonText: 'OK',
+            showCloseButton: true
+          });
+          toast.setMessage(JSON.stringify(notification.message));
+          toast.present();
         });
 
         pushObject.on('registration').subscribe((registration: any) => console.log('Device registered', registration));

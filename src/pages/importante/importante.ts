@@ -40,14 +40,14 @@ export class ImportantePage {
   }
 
   enviar(): void {
-    alert(JSON.stringify(this.form.value));
     let toast = this.toastCtrl.create({
-      duration: 3000,
+      duration: 30000,
       position: 'middle',
       closeButtonText: 'OK',
       showCloseButton: true
     });
-    toast.setMessage('Sugestões enviadas com sucesso!');
+    toast.setMessage('Sugestões enviadas com sucesso! Obrigado!');
+    // toast.setMessage(JSON.stringify(this.form.value));
     toast.present();
     this.form.reset();
   }

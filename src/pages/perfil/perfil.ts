@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
+import {HomePage} from "../home/home";
 
 /**
  * Generated class for the PerfilPage page.
@@ -35,6 +36,7 @@ export class PerfilPage {
 
   getResult(pergunta: string) {
     this.contarPergunta(pergunta);
+    this.navCtrl.setRoot(HomePage);
     if (this.quantPergunA > this.quantPergunB) {
       if (this.quantPergunA > this.quantPergunC) {
         alert('Atualmente seu perfil/estilo de liderança é autossabotador. Você tem crenças enrijecidas sobre si mesmo, se vendo mais limitado do que realmente é. Sua realidade esta muito mais favorável do que imagina. A notícia boa e positiva é que comportamento não é destino nem imutável, Você pode melhorar. Elimine comportamentos incoerentes e autossabotadores que dificultam sua assertividade diante da realidade que tem e desenvolva sua autoconfiança fortalecendo sua autoliderança emocional. Aprenda como fazer isto neste aplicativo.');

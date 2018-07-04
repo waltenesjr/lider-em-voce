@@ -59,7 +59,12 @@ export class LoginPage {
         this.continue();
         this.storage.set('cadastrado', true);
       }).catch((error: any) => {
-        toast.setMessage('Erro ao cadastrar usuário - ' + error.message);
+        if (error.code = 'auth/email-already-in-use') {
+          this.continue();
+          this.storage.set('cadastrado', true);
+        } else if (error.code = 'auth/invalid-email') {
+          toast.setMessage('Email digitado não é válido.');
+        }
         toast.present();
       });
     } else {
@@ -69,17 +74,28 @@ export class LoginPage {
   }
 
   createFacebook() {
-    let toast = this.toastCtrl.create({duration: 3000, position: 'bottom', showCloseButton: true});
+    let toast = this.toastCtrl.create({
+      duration: 4000,
+      position: 'bottom',
+      showCloseButton: true,
+      closeButtonText: 'X',
+    });
     return this.facebook.login(['email', 'public_profile']).then((res: FacebookLoginResponse) => {
       this.facebook.api('me?fields=id,name, email', []).then(profile => {
         let user = new User(profile['email'], '15845514');
-        alert(JSON.stringify(user));
         this.authService.createUser(user).then((user: any) => {
           toast.setMessage('Usuário cadastrado com sucesso');
           toast.present();
           this.continue();
+          this.storage.set('cadastrado', true);
         }).catch((error: any) => {
-          toast.setMessage('Erro ao cadastrar usuário - ' + error.message);
+          if (error.code = 'auth/email-already-in-use') {
+            toast.setMessage('Olá ' + profile['name']);
+            this.continue();
+            this.storage.set('cadastrado', true);
+          } else if (error.code = 'auth/invalid-email') {
+            toast.setMessage('Email digitado não é válido.');
+          }
           toast.present();
         });
       });
