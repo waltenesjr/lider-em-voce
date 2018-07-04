@@ -28,7 +28,7 @@ export class HomePage {
         let toast = this.toastCtrl.create({
           duration: 5000,
           position: 'bottom',
-          closeButtonText: 'OK',
+          closeButtonText: 'X',
           showCloseButton: true
         });
         toast.setMessage('Bem vindo, descubra aqui o líder que há em você');
