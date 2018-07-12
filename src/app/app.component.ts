@@ -34,7 +34,7 @@ export class MyApp {
   }
 
   redirecionar(): void {
-    this.storage.get('cadastrado').then((val) => {
+    this.storage.get('logado').then((val) => {
       if (val) {
         this.rootPage = HomePage;
       } else {

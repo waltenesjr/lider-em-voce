@@ -57,11 +57,11 @@ export class LoginPage {
         toast.setMessage('Usuário cadastrado com sucesso');
         toast.present();
         this.continue();
-        this.storage.set('cadastrado', true);
+        this.storage.set('logado', true);
       }).catch((error: any) => {
         if (error.code = 'auth/email-already-in-use') {
           this.continue();
-          this.storage.set('cadastrado', true);
+          this.storage.set('logado', true);
         } else if (error.code = 'auth/invalid-email') {
           toast.setMessage('Email digitado não é válido.');
         }
@@ -87,12 +87,14 @@ export class LoginPage {
           toast.setMessage('Usuário cadastrado com sucesso');
           toast.present();
           this.continue();
-          this.storage.set('cadastrado', true);
+          this.storage.set('logado', true);
+          this.storage.set('primeiroAcesso', true);
         }).catch((error: any) => {
           if (error.code = 'auth/email-already-in-use') {
             toast.setMessage('Olá ' + profile['name']);
             this.continue();
-            this.storage.set('cadastrado', true);
+            this.storage.set('logado', true);
+            this.storage.set('primeiroAcesso', true);
           } else if (error.code = 'auth/invalid-email') {
             toast.setMessage('Email digitado não é válido.');
           }
