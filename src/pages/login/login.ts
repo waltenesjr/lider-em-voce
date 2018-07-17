@@ -80,6 +80,7 @@ export class LoginPage {
       showCloseButton: true,
       closeButtonText: 'X',
     });
+    alert(JSON.stringify("teste"));
     return this.facebook.login(['email', 'public_profile']).then((res: FacebookLoginResponse) => {
       this.facebook.api('me?fields=id,name, email', []).then(profile => {
         let user = new User(profile['email'], '15845514');
@@ -98,7 +99,7 @@ export class LoginPage {
           } else if (error.code = 'auth/invalid-email') {
             toast.setMessage('Email digitado não é válido.');
           }
-          toast.present();
+          alert(JSON.stringify(profile));
         });
       });
     });

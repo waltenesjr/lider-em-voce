@@ -1,5 +1,8 @@
 page-home {
   .scroll-content {
-    background: url("../assets/imgs/back-menu.jpg") no-repeat center center fixed;
+    background: url("../assets/imgs/back-menu.jpg") no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
   }
 }

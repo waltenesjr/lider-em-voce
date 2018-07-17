@@ -1,6 +1,7 @@
 import {Component, Injector} from '@angular/core';
 import {NavController, NavParams, ToastController} from 'ionic-angular';
 import {FormBuilder, FormGroup} from '@angular/forms';
+import {HomePage} from "../home/home";
 
 /**
  * Generated class for the ImportantePage page.
@@ -50,5 +51,6 @@ export class ImportantePage {
     // toast.setMessage(JSON.stringify(this.form.value));
     toast.present();
     this.form.reset();
+    this.navCtrl.setRoot(HomePage);
   }
 }
