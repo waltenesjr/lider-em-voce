@@ -80,8 +80,7 @@ export class LoginPage {
       showCloseButton: true,
       closeButtonText: 'X',
     });
-    alert(JSON.stringify("teste"));
-    return this.facebook.login(['email', 'public_profile']).then((res: FacebookLoginResponse) => {
+    return this.facebook.login(['empratiqueail', 'public_profile']).then((res: FacebookLoginResponse) => {
       this.facebook.api('me?fields=id,name, email', []).then(profile => {
         let user = new User(profile['email'], '15845514');
         this.authService.createUser(user).then((user: any) => {
